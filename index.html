@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="header">
+                <h1>Calculator</h1>
+            </div>
+            <div id="main-screen">
+                <input type="text" value="" disabled id="subVal">
+                <input type="text" value="0" id="inputVal">
+            </div>
+            <div class="buttons">
+                <button onclick="getValue('%')">%</button><button onclick="clearAll()">C</button><button onclick="removeLastDigit()">DEL</button><button>/</button>
+                <button onclick="getValue('7')">7</button><button onclick="getValue('8')">8</button><button onclick="getValue('9')">9</button><button onclick="getValue('*')">x</button>
+                <button onclick="getValue('4')">4</button><button onclick="getValue('5')">5</button><button onclick="getValue('6')">6</button><button onclick="getValue('-')">-</button>
+                <button onclick="getValue('1')">1</button><button onclick="getValue('2')">2</button><button onclick="getValue('3')">3</button><button onclick="getValue('+')">+</button>
+                <button>H</button><button onclick="getValue('0')">0</button><button onclick="getValue('.')">.</button><button onclick="solve()">=</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="header">
+                <h1>History</h1>
+            </div>
+            <div id="historyDiv">
+                <!-- <div class="his">
+                    <p>5-2 =</p>
+                    <p>3</p>
+                </div> -->
+            </div>
+            <div id="deleteBtn">
+                <button onclick="clearHistory()">Clear All</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
